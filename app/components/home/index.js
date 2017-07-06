@@ -12,7 +12,6 @@ export default class Home extends Component{
         return(
             <div className=''>
                 <Header />
-                <div>主页</div>
             </div>
         )
     }
