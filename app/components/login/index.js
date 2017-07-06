@@ -4,15 +4,15 @@
 
 import React, {Component} from 'react';
 
-import styles from './index.css'
-import Header from '../headers/index'
+import  './index.css'
+
 
 export default class LoginIn extends Component{
 
     render(){
         return(
-            <div className={styles.top}>
-                 <Header />
+            <div className='top'>
+               登录界面
             </div>
         )
     }

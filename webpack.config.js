@@ -14,12 +14,16 @@ module.exports={
 
     module:{
         loaders:[{
+            test:/\.json$/,
+            loader:'json-loader'
+        },{
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
 
         },{
-            test:/\.css$/,
+            test:/\.css?$/,
+            exclude: /node_modules/,
             loader:'style-loader!css-loader'
         }]
     },
