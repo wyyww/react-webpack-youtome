@@ -4,13 +4,13 @@
 
 import React ,{Component} from 'react'
 
-// import Button from '../button/index'
-// <Button/>
+import Button from '../button/index'
+
 export default class  Header  extends Component{
 
     render(){
         return(
-            <div>button</div>
+            <Button/>
         )
     }
 }
