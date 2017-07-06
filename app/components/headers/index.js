@@ -11,7 +11,7 @@ export default class  Header  extends Component{
     render(){
         return(
             <div>
-                YOUTOME
+                YOUTOME打包成功
             </div>
         )
     }

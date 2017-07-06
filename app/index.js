@@ -6,8 +6,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router,Route,Link } from 'react-router-dom'
 
 import styles from './index.css'
-import Login from './login/index';
-import Register from './register/index';
+import Login from './components/login/index';
+import Register from './components/register/index';
 
 class App extends Component{
     render(){
