@@ -3,7 +3,7 @@
  */
 
 var path=require('path');
-
+var Htmlwebpackplugin =require('html-webpack-plugin');
 module.exports={
     devtool: 'eval-source-map',
     entry:path.resolve(__dirname,'./app/index.js'),
@@ -29,5 +29,10 @@ module.exports={
         historyApiFallback: true,//不跳转
         inline: true//实时刷新
     },
+    plugins:[
+        new Htmlwebpackplugin({
+            template:path.resolve(__dirname,'./app/index.template.html')
+        })
+    ]
 
 }
