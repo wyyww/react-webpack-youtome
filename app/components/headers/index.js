@@ -3,37 +3,28 @@
  */
 
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
+import {Link} from 'react-router-dom'
 import {Navbar, Nav, NavItem,NavDropdown,MenuItem, ButtonToolbar, Button} from 'react-bootstrap'
 // import Button from '../button/index'
 // <Button/>
 
+//个人写的
+import './index.scss';
 export default class Header extends Component {
 
     render() {
         return (
-            <Navbar inverse collapseOnSelect>
+            <Navbar  collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#">React-Bootstrap</a>
+                        <a href="#">YOUTOME</a>
                     </Navbar.Brand>
-                    <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav>
-                        <NavItem eventKey={1} href="#">Link</NavItem>
-                        <NavItem eventKey={2} href="#">Link</NavItem>
-                        <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                            <MenuItem eventKey={3.1}>Action</MenuItem>
-                            <MenuItem eventKey={3.2}>Another action</MenuItem>
-                            <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                            <MenuItem divider />
-                            <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                        </NavDropdown>
-                    </Nav>
                     <Nav pullRight>
-                        <NavItem eventKey={1} href="#">Link Right</NavItem>
-                        <NavItem eventKey={2} href="#">Link Right</NavItem>
+                        <NavItem eventKey={1} href="#"><Link to="/" className="header-link">更多</Link></NavItem>
+                        <NavItem eventKey={2} href="#" ><Link to="/register" className="header-link">注册</Link></NavItem>
+                        <NavItem eventKey={3} href="#"><Link to="/login" className="header-link">登录</Link></NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

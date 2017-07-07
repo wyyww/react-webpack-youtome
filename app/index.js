@@ -14,12 +14,12 @@ class App extends Component{
         return(
             <Router>
                 <div>
-                    <ul>
-                        <li><Link to="/" >Home</Link></li>
-                        <li><Link to="login" >Login</Link></li>
-                        <li><Link to="Register" >Register</Link></li>
-                    </ul>
-                    <hr />
+                    {/*<ul>*/}
+                        {/*<li><Link to="/" >Home</Link></li>*/}
+                        {/*<li><Link to="login" >Login</Link></li>*/}
+                        {/*<li><Link to="Register" >Register</Link></li>*/}
+                    {/*</ul>*/}
+                    {/*<hr />*/}
                     <Route exact path="/" component={Home}/>
                     <Route  path="/login" component={Login}/>
                     <Route path='/register' component={Register}/>

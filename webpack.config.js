@@ -8,7 +8,7 @@ module.exports={
     devtool: 'eval-source-map',
     entry:path.resolve(__dirname,'./app/index.js'),
     output:{
-        path:path.resolve(__dirname,'./public'),
+        path:path.resolve(__dirname,'public'),
         filename:'bundle.js'
     },
 
@@ -22,9 +22,16 @@ module.exports={
             loader: 'babel-loader',
 
         },{
-            test:/\.(css|sass)?$/,
+            test:/\.css$/,
+            exclude: /node_modules/,
+            loader:'style-loader!css-loader'
+        },{
+            test:/\.scss$/,
             exclude: /node_modules/,
             loader:'style-loader!css-loader!sass-loader'
+        },{
+            test:/\.(png|jpg)$/,
+            loader:'url-loader?limit=8192'
         }]
     },
 
