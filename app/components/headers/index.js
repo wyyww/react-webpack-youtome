@@ -14,20 +14,22 @@ export default class Header extends Component {
 
     render() {
         return (
-            <Navbar  collapseOnSelect>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="#">YOUTOME</a>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Navbar.Collapse>
-                    <Nav pullRight>
-                        <NavItem eventKey={1} href="#"><Link to="/" className="header-link">更多</Link></NavItem>
-                        <NavItem eventKey={2} href="#" ><Link to="/register" className="header-link">注册</Link></NavItem>
-                        <NavItem eventKey={3} href="#"><Link to="/login" className="header-link">登录</Link></NavItem>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+
+        <Navbar>
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <a href="#">YOUTOME</a>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+                <Nav pullRight>
+                    <NavItem eventKey={1} href="#"><Link to="/" className="header-link">更多</Link></NavItem>
+                    <NavItem eventKey={2} href="#" ><Link to="/register" className="header-link">注册</Link></NavItem>
+                    <NavItem eventKey={3} href="#"><Link to="/login" className="header-link">登录</Link></NavItem>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
         );
     }
 }

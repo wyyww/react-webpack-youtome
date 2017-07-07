@@ -5,8 +5,9 @@ import React, {Component} from 'react';
 
 import {Carousel} from 'react-bootstrap';
 
-import  './index.scss'
-import Header from '../headers/index'
+import  './index.scss';
+import Header from '../headers/index';
+import Footer from '../footer/index'
 export default class Home extends Component{
 
     render(){
@@ -36,6 +37,7 @@ export default class Home extends Component{
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
+                <Footer />
             </div>
         )
     }
