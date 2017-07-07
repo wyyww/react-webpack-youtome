@@ -1,15 +1,11 @@
 
 $header-link: #000;
-$text-decoraation-none:none;
+$text-decoration-none:none;
 .header-link {
-  text-decoration: $text-decoraation-none;
+  text-decoration: $text-decoration-none;
   color:#808080;
-  &:link{
-    text-decoration: $text-decoraation-none;
-    color:#00FFFF;
-  }
   &:hover{
-    text-decoration: $text-decoraation-none;
+    text-decoration: $text-decoration-none;
     color:#AFEEEE;
   }
 }

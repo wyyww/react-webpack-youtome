@@ -5,3 +5,22 @@ $height:500px;
   width:$width;
   height:$height !important;
 }
+
+.section-header{
+  height:250px;
+  text-align: center;
+  background-color: transparent;
+}
+.section-content{
+  width:70%;
+  font-size:26px;
+  //margin:0 auto 0;
+  text-align: center;
+}
+.section-avater{
+  width:70%;
+  margin:0 auto 0;
+}
+.section-chunk{
+  height:400px;
+}
