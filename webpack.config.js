@@ -22,9 +22,9 @@ module.exports={
             loader: 'babel-loader',
 
         },{
-            test:/\.css?$/,
+            test:/\.(css|sass)?$/,
             exclude: /node_modules/,
-            loader:'style-loader!css-loader'
+            loader:'style-loader!css-loader!sass-loader'
         }]
     },
 
