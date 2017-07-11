@@ -126,7 +126,7 @@ export default class Register extends Component{
                 <div  className="general-background-color">
                     <Col sm={8} md={8} mdOffset={2}>
                         <div className="login-case">
-                            <h2 className="login-theme">欢迎注册youtome</h2>
+                            <h2 className="login-theme">欢迎注册</h2>
                             <div className="login-form">
                                 <Form >
                                     <FormGroup controlId="formInlineName">

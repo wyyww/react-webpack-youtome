@@ -6,7 +6,7 @@
  */
 
 import React, {Component} from 'react';
-import {Col,Form,FormGroup,ControlLabel,ButtonGroup,FormControl,Button} from 'react-bootstrap'
+import {Col,Form,HelpBlock,FormGroup,ControlLabel,ButtonGroup,FormControl,Button} from 'react-bootstrap'
 
 import  './index.scss'
 import '../common.scss'
@@ -20,13 +20,17 @@ export default class Register extends Component{
         this.state={
             userPhone:'',
             userPhoneError:'',
-            userPhoneValid:false,
+            userPhoneValid:true,
             password:'',
             passwordError:'',
-            passwordValid:false,
+            passwordValid:true,
+            repassword:'',
+            repasswordError:'',
+            repasswordValid:true,
         }
         this.handlePhoneValueChange=this.handlePhoneValueChange.bind(this);
-        this.handlePasswordValueChange=this.handlePasswordValueChange.bind(this)
+        this.handlePasswordValueChange=this.handlePasswordValueChange.bind(this);
+        this.handleRePasswordValueChange=this.handleRePasswordValueChange.bind(this);
     }
 
 
@@ -65,7 +69,7 @@ export default class Register extends Component{
         this.setState({
             password:value,
         })
-        if (value.length == 11) {
+        if (value.length > 6) {
             if(!regExp.test(value)){
                 this.setState({
                     passwordError:'输入密码长度在6，20位，需要包含字母，数字',
@@ -78,10 +82,30 @@ export default class Register extends Component{
                 })
             }
         }
-        else if(value.length>11){
+        else if(value.length>20){
             this.setState({
                 passwordError:'输入密码长度应该小于20',
                 passwordValid : false,
+            })
+        }
+    }
+//再次输入密码验证
+    handleRePasswordValueChange(e){
+        var value=e.target.value;
+        var userpassword=this.state.password;
+        this.setState({
+            repassword:value,
+        })
+        if (value.length == userpassword.length) {
+            this.setState({
+                repasswordError:(value==userpassword)?"":"两次密码不一致，请重新输入",
+                repasswordValid:(value==userpassword)?true:false,
+            })
+        }
+        else if(value.length>userpassword.length) {
+            this.setState({
+                repasswordError:"两次密码不一致，请重新输入",
+                repasswordValid:false,
             })
         }
     }
@@ -95,19 +119,21 @@ export default class Register extends Component{
                             <h2 className="login-theme">欢迎注册youtome</h2>
                             <div className="login-form">
                                 <Form >
-                                    <FormGroup controlId="formInlineName">
-                                        <FormControl type="text" name="phone" value={this.state.userPhone} onChange={this.handlePhoneValueChange} placeholder="请输入11位手机号码" />
-                                        {!this.state.userPhoneValid && <span>{this.state.userPhoneError}</span>}
+                                    <FormGroup controlId="formValidationSuccess1" validationState={this.state.userPhoneValid?"success":"error"}>
+                                        <FormControl type="text" name="phone"   value={this.state.userPhone} onChange={this.handlePhoneValueChange} placeholder="请输入11位手机号码" />
+                                        <HelpBlock>   {!this.state.userPhoneValid && <span>{this.state.userPhoneError}</span>}</HelpBlock>
                                     </FormGroup>
                                     {' '}
-                                    <FormGroup controlId="formInlineEmail">
+                                    <FormGroup controlId="formValidationSuccess2" validationState={this.state.passwordValid?"success":"error"}>
                                         {' '}
                                         <FormControl type="text" name="password" value={this.state.password} onChange={this.handlePasswordValueChange} placeholder="请输入密码" />
-                                        {!this.state.passwordValid && <span>{this.state.passwordError}</span>}
+                                        <HelpBlock>  {!this.state.passwordValid && <span>{this.state.passwordError}</span>}</HelpBlock>
                                     </FormGroup>
                                     {' '}
-                                    <FormGroup controlId="formInlineName">
-                                        <FormControl type="text" placeholder="请再次输入你的密码" />
+                                    <FormGroup controlId="formValidationSuccess2" validationState={this.state.repasswordValid?"success":"error"}>
+                                        {' '}
+                                        <FormControl type="text" name="repassword" value={this.state.repassword} onChange={this.handleRePasswordValueChange} placeholder="请再次输入你的密码" />
+                                        <HelpBlock>     {!this.state.repasswordValid && <span>{this.state.repasswordError}</span>}</HelpBlock>
                                     </FormGroup>
                                     {' '}
                                     <ButtonGroup vertical block>
