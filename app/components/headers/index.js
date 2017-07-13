@@ -18,7 +18,7 @@ export default class Header extends Component {
         <Navbar>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="#">YOUTOME</a>
+                    <a href="/">YOUTOME</a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

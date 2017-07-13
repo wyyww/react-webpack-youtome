@@ -12,6 +12,7 @@ import  './index.scss'
 import '../common.scss'
 
 import Header from '../headers/index';
+import Footer from '../footer/index';
 export default class Register extends Component{
 
     constructor(props){
@@ -112,7 +113,10 @@ export default class Register extends Component{
     render(){
         return(
             <div>
+                {/*头部的导航开始*/}
                 <Header/>
+                {/*头部的导航结束*/}
+                {/*主体的内容开始*/}
                 <div  className="general-background-color">
                     <Col sm={8} md={8} mdOffset={2}>
                         <div className="login-case">
@@ -144,6 +148,11 @@ export default class Register extends Component{
                         </div>
                     </Col>
                 </div>
+                {/*主体内容的结束*/}
+                {/*地步公司简介开始*/}
+                <div className="clearfix"></div>
+                <Footer/>
+                {/*底部公司简介结束*/}
             </div>
         )
     }

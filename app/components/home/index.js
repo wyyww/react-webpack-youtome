@@ -54,7 +54,7 @@ export default class Home extends Component{
                 <Grid className="container-top-bottom-padding section-chunk">
                     <Row className="show-grid">
                         <Col sm={4} md={6} mdPush={1}><Link to="/tutor" className="section-content">家教对接（点击查看详情）</Link></Col>
-                        <Col sm={6} md={6} mdPush={1}><img className="section-avater" alt="报考对接" src={require('../../assets/9b.jpg')}/></Col>
+                        <Col sm={4} md={6} ><img className="section-avater" alt="报考对接" src={require('../../assets/9b.jpg')}/></Col>
                     </Row>
                 </Grid>
                 <Grid className="container-top-bottom-padding general-background-color section-chunk"  >

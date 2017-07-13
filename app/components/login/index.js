@@ -12,6 +12,7 @@ import  './index.scss'
 import '../common.scss'
 
 import Header from '../headers/index';
+import Footer from "../footer/index";
 export default class Login extends Component{
 
     constructor(props){
@@ -90,7 +91,10 @@ export default class Login extends Component{
     render(){
         return(
             <div>
+                {/*头部导航开始*/}
                 <Header/>
+                {/*头部导航结束*/}
+                {/*登录模块开始*/}
                 <div  className="general-background-color">
                     <Col sm={8} md={8} mdOffset={2}>
                         <div className="login-case">
@@ -115,7 +119,12 @@ export default class Login extends Component{
                             </div>
                         </div>
                     </Col>
+                    <div className="clearfix"></div>
                 </div>
+                {/*登录模块结束*/}
+                {/*底部公司简介开始*/}
+                <Footer/>
+                {/*底部公司简介结束*/}
             </div>
         )
     }
