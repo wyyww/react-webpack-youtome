@@ -11,7 +11,8 @@ import "../common.scss"
 
 import Header from "../headers/index";
 import Footer from "../footer/index";
-import ContentSearch from '../searchBar/index'
+import ContentSearch from '../searchBar/index';
+import TutorBriefIntroduction from "../tutorbriefintroduction/index";
 export default class TutorAbutment extends Component{
 
     constructor(props){
@@ -129,9 +130,8 @@ export default class TutorAbutment extends Component{
                 </Grid>
                 {/*学科内容导航结束*/}
                 {/*辅导老师简要介绍*/}
-                <div>
-                    brief introduction
-                </div>
+                <TutorBriefIntroduction/>
+                {/*辅导老师简要介绍结束*/}
             </div>
         )
     }
