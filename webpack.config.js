@@ -2,37 +2,39 @@
  * Created by PC on 2017/7/6.
  */
 
-var path=require('path');
-var Htmlwebpackplugin =require('html-webpack-plugin');
-module.exports={
+var path = require('path');
+var Htmlwebpackplugin = require('html-webpack-plugin');
+module.exports = {
     devtool: 'eval-source-map',
-    entry:path.resolve(__dirname,'./app/index.js'),
-    output:{
-        path:path.resolve(__dirname,'public'),
-        filename:'bundle.js'
+    entry: path.resolve(__dirname, './app/index.js'),
+    output: {
+        path: path.resolve(__dirname, 'public'),
+        filename: 'bundle.js'
     },
 
-    module:{
-        loaders:[{
-            test:/\.json$/,
-            loader:'json-loader'
-        },{
+    module: {
+        loaders: [{
+            test: /\.json$/,
+            loader: 'json-loader'
+        }, {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
 
-        },{
-            test:/\.css$/,
-            exclude: /node_modules/,
-            loader:'style-loader!css-loader'
-        },{
-            test:/\.scss$/,
-            exclude: /node_modules/,
-            loader:'style-loader!css-loader!sass-loader'
-        },{
-            test:/\.(png|jpg)$/,
-            loader:'url-loader?limit=8192'
-        }]
+        },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                loader: 'style-loader!css-loader!postcss-loader'
+            }, {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loader: 'style-loader!css-loader!postcss-loader!sass-loader',
+            }, {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=8192'
+            }],
+
     },
 
     devServer: {
@@ -40,10 +42,11 @@ module.exports={
         historyApiFallback: true,//不跳转
         inline: true//实时刷新
     },
-    plugins:[
+    plugins: [
         new Htmlwebpackplugin({
-            template:path.resolve(__dirname,'./app/index.template.html')
-        })
+            template: path.resolve(__dirname, './app/index.template.html')
+        }),
+
     ]
 
 }

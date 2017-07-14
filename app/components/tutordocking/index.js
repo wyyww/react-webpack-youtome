@@ -133,14 +133,14 @@ export default class TutorAbutment extends Component {
                         <Col xs={12} md={12}>
                           <div className="container-top-bottom-padding ">
                              <div className="block-introduction">
-                                 <Col md={6}>家教老师介绍</Col>
-                                 <Col md={1}  className="sub-index-button">
+                                 <Col xs={6} md={6}>家教老师介绍</Col>
+                                 <Col xs={1} md={1}  className="sub-index-button">
                                      <div>语文</div>
                                  </Col>
-                                 <Col md={1} mdOffset={1} className="sub-index-button">
+                                 <Col xs={1} xsOffset={1} md={1} mdOffset={1} className="sub-index-button">
                                      数学
                                  </Col>
-                                 <Col md={1} mdOffset={1} className="sub-index-button">
+                                 <Col xs={1} xsOffset={1} md={1} mdOffset={1} className="sub-index-button">
                                      英语
                                  </Col>
                              </div>
