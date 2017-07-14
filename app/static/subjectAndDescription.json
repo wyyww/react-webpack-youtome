@@ -1,0 +1,40 @@
+[{
+  "subjectName":"语文",
+  "key":0,
+  "description":"学好语文，其实并不难，关键在于方法的掌握，在于日常生活中点点滴滴的积累。"
+},{
+  "subjectName":"数学",
+  "key":1,
+  "description":"，是研究数量、结构、变化、空间以及信息等概念的一门学科，从某种角度看属于形式科学的一种"
+},
+  {
+    "subjectName":"英语",
+    "key":2,
+    "description":"Hi everybody! It's really my honor to be here to introduce myself."
+  },{
+  "subjectName":"物理",
+  "key":3,
+  "description":"物理学专业培养掌握物理学的基本理论与方法，具有良好的数学基础和实验技能"
+},{
+  "subjectName":"化学",
+  "key":4,
+  "description":"化学是自然科学的一种，在分子、原子层次上研究"
+},{
+  "subjectName":"生物",
+  "key":5,
+  "description":"生物分类是研究生物的一种基本方法。"
+},
+  {
+    "subjectName":"历史",
+    "key":6,
+    "description":"1.记载和解释作为一系列人类进程历史事件的一门学科。2.沿革，来历。"
+  },{
+  "subjectName":"政治",
+  "key":7,
+  "description":"政治，它指对社会治理的行为，亦指维护统治的行为。"
+},{
+  "subjectName":"地理",
+  "key":8,
+  "description":"地理（Geography）是研究地球表面的地理环境中各种自然现象和人文现象，以及它们之间相互关系的学科"
+}
+]
