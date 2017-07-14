@@ -3,8 +3,8 @@
  */
 
 
-import React,{Component} from 'react';
-import {Grid,Row,Col,Thumbnail,Button} from "react-bootstrap";
+import React, {Component} from 'react';
+import {Grid, Row, Col, Thumbnail, Button, Well} from "react-bootstrap";
 
 import "./index.scss";
 import "../common.scss"
@@ -13,25 +13,23 @@ import Header from "../headers/index";
 import Footer from "../footer/index";
 import ContentSearch from '../searchBar/index';
 import TutorBriefIntroduction from "../tutorbriefintroduction/index";
-export default class TutorAbutment extends Component{
+export default class TutorAbutment extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-
-        }
+        this.state = {}
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 {/*头部导航开始*/}
-                 <Header/>
+                <Header/>
                 {/*头部导航结束*/}
                 {/*搜索框开始*/}
                 <ContentSearch />
                 {/*搜索框结束*/}
-                 {/*学科内容导航开始*/}
+                {/*学科内容导航开始*/}
                 <Grid>
                     <Row>
                         <Col xs={6} md={3}>
@@ -130,6 +128,26 @@ export default class TutorAbutment extends Component{
                 </Grid>
                 {/*学科内容导航结束*/}
                 {/*辅导老师简要介绍*/}
+                <Grid>
+                    <Row>
+                        <Col xs={12} md={12}>
+                          <div className="container-top-bottom-padding ">
+                             <div className="block-introduction">
+                                 <Col md={6}>家教老师介绍</Col>
+                                 <Col md={1}  className="sub-index-button">
+                                     <div>语文</div>
+                                 </Col>
+                                 <Col md={1} mdOffset={1} className="sub-index-button">
+                                     数学
+                                 </Col>
+                                 <Col md={1} mdOffset={1} className="sub-index-button">
+                                     英语
+                                 </Col>
+                             </div>
+                          </div>
+                        </Col>
+                    </Row>
+                </Grid>
                 <TutorBriefIntroduction/>
                 {/*辅导老师简要介绍结束*/}
             </div>
