@@ -14,8 +14,12 @@ $height:500px;
 .section-content{
   width:70%;
   font-size:26px;
-  //margin:0 auto 0;
   text-align: center;
+  color: #000;
+  &:hover{
+    color:#1874CD;
+    text-decoration: none;
+  }
 }
 .section-avater{
   width:70%;

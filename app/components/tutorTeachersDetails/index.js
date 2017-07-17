@@ -16,12 +16,16 @@ export default class TutorTeachersDetails extends Component{
     constructor(props){
         super(props);
         this.state={
-
+            id:'',
         }
     }
 
     componentDidMount(){
-        console.log(this.props.location)
+        const params=this.props.location;
+        // console.log(params);
+        this.setState({
+            id: params.query.id,
+        })
     }
 
     render(){
@@ -38,7 +42,7 @@ export default class TutorTeachersDetails extends Component{
                                     <Image width={200} height={200} src="/assets/thumbnail.png" circle  alt="Image"/>
                                 </Media.Left>
                                 <Media.Body>
-                                    <Media.Heading>Media Heading</Media.Heading>
+                                    <Media.Heading>{this.state.id}王嘉豪</Media.Heading>
                                     <p>教育背景：Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                                     <p>授课时常：600小时</p>
                                     <p>教育理念：用最牛逼的办法，交出最牛逼的人，我们都是i牛逼的人</p>

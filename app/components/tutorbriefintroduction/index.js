@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 
 import "./index.scss";
 import "../common.scss";
+
 import briefIntroduction from '../../static/test.json';
 
 export default class TutorBriefIntroduction extends Component {
@@ -34,8 +35,8 @@ export default class TutorBriefIntroduction extends Component {
                                 <Image width={200} height={200} src="/assets/thumbnail.png" circle alt="Image" />
                             </Media.Left>
                             <Media.Body>
-                                <Media.Heading >
-                                    <Link to={{ pathname: '/teacher', query: { id: data.id } }}>
+                                <Media.Heading>
+                                    <Link to={{ pathname: '/teacher', query: { id: data.id } }} className="link_hover">
                                         {data.name}
                                     </Link>
                                 </Media.Heading>
@@ -50,9 +51,7 @@ export default class TutorBriefIntroduction extends Component {
             <div>
                 <Grid>
                     <Row className="show-grid">
-
                         {briefIntro}
-
                     </Row>
                 </Grid>
             </div>

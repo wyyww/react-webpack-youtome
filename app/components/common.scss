@@ -8,3 +8,11 @@ $backgroundColor:#f5f5f6;
 .general-background-color{
   background-color: $backgroundColor;
 }
+
+.link_hover{
+  color:#000;
+  &:hover{
+    color:#00F5FF;
+    text-decoration:none;
+  }
+}

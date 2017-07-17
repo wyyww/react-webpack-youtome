@@ -4,6 +4,7 @@
 
 
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {Grid, Row, Col, Thumbnail, Button, Well} from "react-bootstrap";
 
 import "./index.scss";
@@ -25,11 +26,6 @@ export default class TutorAbutment extends Component {
         }
     }
 
-
-    _buttonClickToGetSubjectDetails(params){
-        console.log(params);
-    }
-
     render() {
         let that=this;
         var newArray=
@@ -39,9 +35,12 @@ export default class TutorAbutment extends Component {
                     <Thumbnail src="/assets/thumbnaildiv.png" alt="242x200">
                         <h3>{data.subjectName}</h3>
                         <p>{data.description}</p>
-                        <p onClick={that._buttonClickToGetSubjectDetails.bind(this,data.key)}>
+                        {/*<p onClick={that._buttonClickToGetSubjectDetails.bind(this,data.key)}>*/}
+                            {/*<Button type="button" bsStyle="default" >点击查看</Button>*/}
+                        {/*</p>*/}
+                        <Link to={{ pathname: '/courseIntroduction', query: { subject_id: data.key } }} className="link_hover">
                             <Button type="button" bsStyle="default" >点击查看</Button>
-                        </p>
+                        </Link>
                     </Thumbnail>
                 </Col>
             )
@@ -85,10 +84,6 @@ export default class TutorAbutment extends Component {
                 <TutorBriefIntroduction/>
                 {/*辅导老师简要介绍结束*/}
             </div>
-
-
-
-
 
         )
     }
