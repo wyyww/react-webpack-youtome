@@ -3,7 +3,7 @@
  */
 
 import React,{Component} from 'react';
-import {Media,Image,Grid,Row,Col} from 'react-bootstrap';
+import {Media,Image,Grid,Row,Col,Button} from 'react-bootstrap';
 
 import "./index.scss";
 import "../common.scss"
@@ -28,6 +28,13 @@ export default class TutorTeachersDetails extends Component{
         })
     }
 
+    _buttonClickToOrderTutor(){
+        console.log('我要预约你知道吗');
+    }
+
+    _buttonClickToCancelOrderedTutor(){
+        console.log('我要取消取悦');
+    }
     render(){
         return(
             <div>
@@ -46,6 +53,8 @@ export default class TutorTeachersDetails extends Component{
                                     <p>教育背景：Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                                     <p>授课时常：600小时</p>
                                     <p>教育理念：用最牛逼的办法，交出最牛逼的人，我们都是i牛逼的人</p>
+                                    <Button onClick={this._buttonClickToOrderTutor}>预约</Button>
+                                    <Button onClick={this._buttonClickToCancelOrderedTutor}>取消预约</Button>
                                 </Media.Body>
                             </Media>
                         </Col>
