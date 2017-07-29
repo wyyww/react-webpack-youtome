@@ -29,61 +29,7 @@ class App extends Component{
 }
 
 
-// ////////////////////////////////////////////////////////////
-// // then our route config
-// const routes = [
-//     { path: '/',
-//         component: Home
-//     },
-//     { path: '/login',
-//         component: Login,
-//     },
-//     { path: '/register',
-//         component: Register,
-//     },
-//     { path: '/tutor',
-//         component: TutorAbutment,
-//         routes: [
-//             { path: '/tutor/teacher',
-//                 component: TutorTeachersDetails
-//             },
-//             { path: '/tutor/RouteConfigExample',
-//                 component: RouteConfigExample
-//             }
-//         ]
-//     }
-// ]
-//
-// // wrap <Route> and use this everywhere instead, then when
-// // sub routes are added to any route it'll work
-// const RouteWithSubRoutes = (route) => (
-//     <Route path={route.path} render={props => (
-//         // pass the sub-routes down to keep nesting
-//         <route.component {...props} routes={route.routes}/>
-//     )}/>
-// )
-//
-// const App = () => (
-//     <Router>
-//         <div>
-//             {/*<ul>*/}
-//                 {/*<li><Link to="/tacos">Tacos</Link></li>*/}
-//                 {/*<li><Link to="/sandwiches">Sandwiches</Link></li>*/}
-//             {/*</ul>*/}
-//             <Route exact path="/" component={Home}/>
-//             <Route  path="/login" component={Login}/>
-//             <Route path='/register' component={Register}/>
-//             <Route path='/tutor' component={TutorAbutment} />
-//             <Route path="/tutor/teacher" component={TutorTeachersDetails} />
-//
-//             <Route path='/tutor/RouteConfigExample' component={RouteConfigExample}/>
-//             {/*{routes.map((route, i) => (*/}
-//                 {/*<RouteWithSubRoutes key={i} {...route}/>*/}
-//             {/*))}*/}
-//         </div>
-//     </Router>
-// )
-//
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
